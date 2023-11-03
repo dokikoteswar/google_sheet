@@ -1,0 +1,65 @@
+.tools{
+     width: 100vw;
+    height: 23vh;
+    box-sizing: border-box;
+}
+.options {
+   
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+    padding-left: 20px;
+    /* /* padding-top: ; */
+    margin-top: 10px; 
+    /* width: 60vw ; */
+    /* margin: auto; */
+    align-items: center;
+   
+}
+.options input, .options select {
+    width: 100px;
+}
+.options .material-icons {
+    font-size: 20px !important;
+}
+
+.bottom-section{ 
+    display: flex;
+    gap: 20px;
+    margin: 10px;
+    align-items: center;
+}
+.bottom-section input {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+#active-cell {
+    background-color: #ededed;
+    padding: 10px;
+    font-size: 14px !important;
+}
+.expression{
+    height: 10px !important;
+}
+
+.option-btn {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+}
+.option-btn:hover {
+    background-color: #ededed;
+}
+
+.hidden-input {
+    width: 0 !important; 
+    height: 0;
+    border: none ;
+}
+.hidden-input:checked + label {
+    background-color: #ededed;
+}
+::-webkit-scrollbar{
+    display: none;
+}

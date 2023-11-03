@@ -1,0 +1,93 @@
+/* *{
+    padding: 0px;
+    margin: 0px;
+} */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: root-font;
+}
+body{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.page-action{
+  display: flex;
+  align-items: end;
+  height: 40px;
+  background-color: #218c74;
+  padding-left: 10px;
+}
+.page-action>div{
+  padding: 5px 10px;
+  color: #fff;
+}
+#page-active{
+  background: #fff;
+  color: #218c74;
+}
+
+
+.root-container {
+  width: 100vw;
+  height: 75vh;
+
+  overflow: scroll;
+}
+.header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  width: fit-content;
+  z-index: 100;
+}
+.header > div:nth-child(1) {
+  left: 0;
+  position: sticky;
+  z-index: 100;
+  background-color: #e7e7e7;
+}
+.header-cell {
+ 
+  text-align: center;
+  
+}
+.body {
+  width: fit-content;
+  
+  display: flex;
+}
+.sno {
+  position: sticky;
+  left: 0px;
+}
+.sno-cell {
+  z-index: 10;
+  background-color: #fff;
+  
+  text-align: center;
+  
+}
+.main {
+  height: 100px;
+  
+
+}
+.row{
+  display: flex;
+
+}
+.cell{
+  min-width: 150px;
+  padding: 5px;
+  border: 1px solid #C4C7C5 ;
+}
+
+@font-face {
+  font-family: root-font;
+  src: url(./root-font.ttf);
+}
+
