@@ -15,7 +15,7 @@ const defaultProperties = {
   isBold: false,
   isItalic: false,
   isUnderlined: false,
-  value: ""
+  value: "",
 };
 
 function onCellFocus(e) {
@@ -62,7 +62,7 @@ function onFormChange() {
   };
 
   applyStylesToCell(curentState);
-  state[activeElement.id] = {...curentState, value: activeElement.innerText};
+  state[activeElement.id] = { ...curentState, value: activeElement.innerText };
 }
 function applyStylesToCell(styleObj) {
   activeElement.style.fontSize = styleObj.fontSize + "px";
@@ -70,16 +70,27 @@ function applyStylesToCell(styleObj) {
   activeElement.style.color = styleObj.textColor;
   activeElement.style.backgroundColor = styleObj.backgroundColor;
   activeElement.style.textAlign = styleObj.textAlign;
-   
-  activeElement.style.fontWeight = styleObj.isBold ? "bold":"normal";
-  activeElement.style.fontStyle = styleObj.isItalic ? "italic":"normal";
-  activeElement.style.textDecoration = styleObj.isUnderlined ? "underline" : "none";
-  
+
+  activeElement.style.fontWeight = styleObj.isBold ? "bold" : "normal";
+  activeElement.style.fontStyle = styleObj.isItalic ? "italic" : "normal";
+  activeElement.style.textDecoration = styleObj.isUnderlined
+    ? "underline"
+    : "none";
 }
 
-function onChangeFontSize(eve){
-          let ans = eval(eve.value);
-          activeElement.innerText =ans;
-          eval.value ="";
-
+function onChangeFontSize(eve) {
+  formula.addEventListener("keyup", onKeyUp);
+  let ans = eval(eve.value);
+  
+  function onKeyUp(e) {
+    console.log(e);
+    if(e.code == "Enter"){
+      if (undefined != ans) {
+        activeElement.innerText = ans;
+      } else {
+        eve.value = "";
+      }
+    }
+    
+  }
 }
